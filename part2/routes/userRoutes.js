@@ -2,41 +2,6 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
 
-// GET all users (for admin/testing)
-router.get('/', async (req, res) => {
-  try {
-    const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
-    res.json(rows);
-  } catch (error) {
-    res.status(500).json({ error: 'Failed to fetch users' });
-  }
-});
-
-// POST a new user (simple signup)
-router.post('/register', async (req, res) => {
-  const { username, email, password, role } = req.body;
-
-  try {
-    const [result] = await db.query(`
-      INSERT INTO Users (username, email, password_hash, role)
-      VALUES (?, ?, ?, ?)
-    `, [username, email, password, role]);
-
-    res.status(201).json({ message: 'User registered', user_id: result.insertId });
-  } catch (error) {
-    res.status(500).json({ error: 'Registration failed' });
-  }
-});
-
-// GET current user (if logged in)
-router.get('/me', (req, res) => {
-  if (req.session.user) {
-    res.json({ user: req.session.user });
-  } else {
-    res.status(401).json({ error: 'Not logged in' });
-  }
-});
-
 // POST login
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
@@ -73,6 +38,41 @@ router.post('/login', async (req, res) => {
     // Log the error and return a generic error message
     console.error('Login error:', error);
     res.status(500).json({ error: 'Login failed' });
+  }
+});
+
+// GET all users (for admin/testing)
+router.get('/', async (req, res) => {
+  try {
+    const [rows] = await db.query('SELECT user_id, username, email, role FROM Users');
+    res.json(rows);
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to fetch users' });
+  }
+});
+
+// POST a new user (simple signup)
+router.post('/register', async (req, res) => {
+  const { username, email, password, role } = req.body;
+
+  try {
+    const [result] = await db.query(`
+      INSERT INTO Users (username, email, password_hash, role)
+      VALUES (?, ?, ?, ?)
+    `, [username, email, password, role]);
+
+    res.status(201).json({ message: 'User registered', user_id: result.insertId });
+  } catch (error) {
+    res.status(500).json({ error: 'Registration failed' });
+  }
+});
+
+// GET current user (if logged in)
+router.get('/me', (req, res) => {
+  if (req.session.user) {
+    res.json({ user: req.session.user });
+  } else {
+    res.status(401).json({ error: 'Not logged in' });
   }
 });
 
