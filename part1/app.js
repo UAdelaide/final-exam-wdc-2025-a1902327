@@ -52,7 +52,7 @@ let db;
 
 app.get('/api/dogs', async (req, res) => {
     try {
-        var sql = `
+        var get_dog_query = `
         SELECT
             d.name AS dog_name,
             d.size,
@@ -60,7 +60,7 @@ app.get('/api/dogs', async (req, res) => {
         FROM Dogs d
         JOIN Users u ON d.owner_id = u.user_id;
         `;
-        var [rows] = await db.query(sql);
+        var [rows] = await db.query(get_dog_query);
         res.json(rows);
     } catch (error) {
         console.error('Failed to get dogs list:', error);
