@@ -15,7 +15,9 @@ createApp({
 
             xhr.onload = () => {
                 try {
-                    const data = 
+                    const data = JSON.parse(xhr.responseText);
+
+                    if (data.status === 'success')
                 }
             }
         },
