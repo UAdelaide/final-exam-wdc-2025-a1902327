@@ -113,7 +113,11 @@ app.get('/api/walkrequests/open', async (req, res) => {
 });
 
 app.get('/api/walkers/summary', async (req, res) => {
-    try
+    try {
+        var get_walkers_summary_query = `
+        SELECT
+        `
+    }
 });
 
 module.exports = app;
