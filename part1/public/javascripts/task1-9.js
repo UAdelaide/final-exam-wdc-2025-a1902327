@@ -49,4 +49,4 @@ createApp({
     mounted() {
         this.getDog();
     }
-}).mounted('#app');
+}).mount('#app');
