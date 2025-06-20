@@ -66,6 +66,7 @@
             if (!res.ok) throw new Error('Not logged in');
             const data = await res.json();
             user.value = data.user;
+            // 
           } catch (err) {
             window.location.href ='/';
           }
