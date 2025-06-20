@@ -6,6 +6,9 @@ require('dotenv').config();
 const app = express();
 
 // Session middleware setup
+app.use(session({
+    secret: 
+}))
 
 // Middleware
 app.use(express.json());
