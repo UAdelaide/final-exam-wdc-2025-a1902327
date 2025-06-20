@@ -27,7 +27,7 @@ createApp({
         moveButton() {
             var top = Math.random() * (windows.innerHeight - 100);
             var left = Math.random() * (window.innerWidth - 200);
-            
+            this.button_pos = {top: top, left: left};
         }
     }
 })
