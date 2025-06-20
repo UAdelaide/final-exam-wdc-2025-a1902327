@@ -68,7 +68,9 @@
             }
 
             // When login is successful, redirect to the dashboard
-            if
+            if (data.user.role === 'owner') {
+              window.location.href = '/owner-dashboard.html';
+            } else if 
 
     }).mount('#app');
   </script>
