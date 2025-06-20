@@ -55,7 +55,10 @@ app.get('/owner-dashboard', authCheck, (req, res) => {
 
 app.get('/walker-dashboard', authCheck, (req, res) => {
     if (req.session.user.role === 'walker') {
-        
+        res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
+    }
+    else {
+        res.status(403).send('Access denied');
     }
 })
 
