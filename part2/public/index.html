@@ -49,6 +49,9 @@
           errorMessage.value = '';
           try {
             const response = await('/api/users/me');
+            if (res.ok) {
+              const res = await res.json();
+            }
           }
         }
       data() {
