@@ -123,9 +123,11 @@
         // Logout function
         async function logout() {
           try {
-            const resawait fetch('/api/users/logout', {
+            const response = await fetch('/api/users/logout', {
               method: 'POST'
             });
+
+            if 
           } catch (err) {
             error.value = 'Logout failed';
           }
