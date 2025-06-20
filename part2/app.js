@@ -53,6 +53,7 @@ app.get('/owner-dashboard', authCheck, (req, res) => {
     }
 });
 
+app.get()
 
 // Export the app instead of listening here
 module.exports = app;
