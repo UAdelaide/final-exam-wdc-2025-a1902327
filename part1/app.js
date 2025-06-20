@@ -129,8 +129,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         ORDER BY u.username;
         `;
         var [rows] = await db.query(get_walkers_summary_query);
-        res.json
-    }
+        res.json(rows);
+    
 });
 
 module.exports = app;
