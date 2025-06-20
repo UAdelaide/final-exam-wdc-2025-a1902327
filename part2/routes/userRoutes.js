@@ -56,6 +56,9 @@ router.get('/dogs', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
     return res.status(403).json({ error: 'Owner access required' });
   }
+
+  var ownerID = req.session.user.user_id;
+  tr
 });
 
 // POST logout
