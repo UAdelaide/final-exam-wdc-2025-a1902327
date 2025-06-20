@@ -79,18 +79,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-async function startApp() {
-    await initializeDatabase();
-    db = await mysql.createConnection(dbConfig);
-    console.log(`Connected to database '${dbConfig.database}'.`);
-
-    app.listen(port, () => {
-        console.log('Server is running on http://localhost:' + port);
-        console.log('API endpoints are avaliable:');
-        console.log('GET /api/dogs');
-    });
-}
-
-startApp();
-
 module.exports = app;
