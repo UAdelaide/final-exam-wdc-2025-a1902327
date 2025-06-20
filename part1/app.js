@@ -116,7 +116,8 @@ app.get('/api/walkers/summary', async (req, res) => {
     try {
         var get_walkers_summary_query = `
         SELECT
-        `
+            u.username AS walker_username,
+            COUNT(DISTINCT WR.request)`
     }
 });
 
