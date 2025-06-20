@@ -25,6 +25,7 @@ let db;
     console.log('Connected to MySQL server');
 
     // Create the database if it doesn't exist
+    const schema
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
