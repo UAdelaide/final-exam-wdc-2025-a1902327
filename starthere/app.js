@@ -22,7 +22,7 @@ let db;
       user: 'root',
       password: 'passowrd' // Set your MySQL root password
     });
-    console.lo
+    console.log('Connected to MySQL server');
 
     // Create the database if it doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
