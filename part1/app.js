@@ -119,7 +119,9 @@ app.get('/api/walkers/summary', async (req, res) => {
             u.username AS walker_username,
             COUNT(DISTINCT WR.request_id) AS completed_walks,
             COUNT(ratings.rating) AS total_ratings,
-            AVG(rating)`
+            AVG(ratings.rating) AS average_rating
+        FROM Users u
+        LEFT JOIN WalkRe`
     }
 });
 
