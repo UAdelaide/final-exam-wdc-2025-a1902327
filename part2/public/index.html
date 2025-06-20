@@ -40,15 +40,15 @@
   <script>
     const { createApp } = Vue;
     createApp({
-        setup() {
-          const email = ref('');
-          const password = ref('');
-          const errorMessage = ref('');
+      setup() {
+        const email = ref('');
+        const password = ref('');
+        const errorMessage = ref('');
 
-          async function login() {
+        async function login() {
           errorMessage.value = '';
           try {
-            const response = await('/api/users/me');
+            const response = await ('/api/users/me');
             if (res.ok) {
               const res = await res.json();
               if (data.user.role === 'owner') {
@@ -60,8 +60,8 @@
           } catch (error) {
             console.error('Not loged in:', error);
           }
-      });
-      return { email, password, errorMessage, login };
+        });
+    return { email, password, errorMessage, login };
     }).mount('#app');
   </script>
 
