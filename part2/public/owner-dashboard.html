@@ -14,7 +14,7 @@
        <h1 class="mb-4 text-primary">Owner Dashboard</h1>
        <button class="btn btn-outline-danger" @click="logout">Logout</button>
     </header>
-    
+
     <!-- Walk request form -->
     <div class="card mb-4">
       <div class="card-header bg-primary text-white">
@@ -118,6 +118,8 @@
             message.value = '';
           }
         }
+
+        async function logout(
 
         onMounted(() => {
           loadWalks();
