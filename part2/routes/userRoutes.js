@@ -53,7 +53,7 @@ router.get('/me', (req, res) => {
 // GET dogs data for the logged in owner
 router.get('/dogs', async (req, res) => {
   if (!req.session.user || req.session.user.role !== 'owner') {
-    return 
+    return res.status(403).json({ error: ''})
   }
 })
 
