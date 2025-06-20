@@ -70,7 +70,11 @@
             // When login is successful, redirect to the dashboard
             if (data.user.role === 'owner') {
               window.location.href = '/owner-dashboard.html';
-            } else if 
+            } else if (data.user.role === 'walker') {
+              window.location.href = '/walker-dashboard.html';
+            } else {
+              errorMessage.value = ''
+            }
 
     }).mount('#app');
   </script>
