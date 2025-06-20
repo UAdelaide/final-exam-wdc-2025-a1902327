@@ -49,6 +49,8 @@ let db;
 app.get('api/dogs', async (req, res) => {
     try {
         var sql = `
+        SELECT
+            d.name as 
         `
     }
 
