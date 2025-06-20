@@ -98,8 +98,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
             wr.requested_time,
             wr.duration_minutes,
             wr.location
+            u.username AS owner_username
         FROM WalkRequests wr
         JOIN Dogs d ON wr.dog_id = d.dog_id
+        JOIN 
         WHERE wr.status = 'open';
         `;
         var [rows] = await db.query(get_open_requests_query);
