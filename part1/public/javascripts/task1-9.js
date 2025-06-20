@@ -17,7 +17,9 @@ createApp({
                 try {
                     const data = JSON.parse(xhr.responseText);
 
-                    if (data.status === 'success')
+                    if (data.status === 'success') {
+                        this.dog_img_link = data.message;
+                    }
                 }
             }
         },
