@@ -5,7 +5,7 @@ createApp({
         return {
             dog_img_link: '',
             visible: false,
-            button
+            button_pos: { top: 200, left: window.inner}
         }
     }
 })
