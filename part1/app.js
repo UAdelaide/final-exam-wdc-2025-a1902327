@@ -12,8 +12,9 @@ var app = express();
 var port = 8080;
 
 var dbConfig = {
-  host: 'localhost',
-  user
+    host: 'localhost',
+    user: 'root',
+password: 'password',
 
 app.use(logger('dev'));
 app.use(express.json());
