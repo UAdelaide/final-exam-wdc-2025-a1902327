@@ -105,8 +105,10 @@
           try {
             await fetch('/api/users/logout', { method: 'POST' });
             window.location.href = '/';
-          } catch 
-        });
+          } catch (err) {
+            error.value = 'Logout failed';
+          }
+        }
 
         onMounted(() => {
           loadWalkRequests();
