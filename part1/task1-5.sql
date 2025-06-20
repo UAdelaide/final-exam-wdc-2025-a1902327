@@ -8,3 +8,5 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('tommytung', 'tommy@ava.com', 'hashed696','owner'),
 ('lucateng', 'luca@teng.com', 'hashed969', 'walker');
+
+-- Insert five dogs
