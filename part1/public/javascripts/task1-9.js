@@ -13,7 +13,7 @@ createApp({
             fetch('https://dog.ceo/api/breeds/image/random')
                 .then(response => response.json())
                 .then(data => {
-                    if (data.status === 'sucess') {
+                    if (data.status === 'success') {
                         this.dog_img_link = data.message;
                     }
                 })
