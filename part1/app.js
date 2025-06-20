@@ -44,7 +44,7 @@ async function ini(params) {
 // API Routes
 let db;
 
-app.get('api/dogs')
+app.get('api/dogs', )
 
 app.use(logger('dev'));
 app.use(express.json());
