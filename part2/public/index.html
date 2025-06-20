@@ -51,6 +51,7 @@
             const response = await('/api/users/me');
             if (res.ok) {
               const res = await res.json();
+              if (data.user.role === 'owner')
             }
           }
         }
