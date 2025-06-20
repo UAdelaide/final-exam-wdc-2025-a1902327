@@ -42,7 +42,9 @@ const authCheck = (req, res, next) => {
     }
 };
 
-app.get('/owner')
+app.get('/owner-dashboard', authCheck, (req, res) => {
+    res
+})
 
 // Export the app instead of listening here
 module.exports = app;
