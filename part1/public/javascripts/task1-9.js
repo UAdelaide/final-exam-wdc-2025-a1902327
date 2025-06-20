@@ -29,5 +29,8 @@ createApp({
             var left = Math.random() * (window.innerWidth - 200);
             this.button_pos = {top: top, left: left};
         }
+    },
+    mounted() {
+        this.getDog();
     }
-})
+}).mount
