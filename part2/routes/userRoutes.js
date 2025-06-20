@@ -41,6 +41,15 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// GET current user (if logged in)
+router.get('/me', (req, res) => {
+  if (req.session.user) {
+    res.json({ user: req.session.user });
+  } else {
+    res.status(401).json({ error: 'Not logged in' });
+  }
+});
+
 // POST logout
 router.post('/logout', (req, res) => {
   req.session.destroy(err => {
@@ -60,15 +69,6 @@ router.get('/', async (req, res) => {
     res.json(rows);
   } catch (error) {
     res.status(500).json({ error: 'Failed to fetch users' });
-  }
-});
-
-// GET current user (if logged in)
-router.get('/me', (req, res) => {
-  if (req.session.user) {
-    res.json({ user: req.session.user });
-  } else {
-    res.status(401).json({ error: 'Not logged in' });
   }
 });
 
