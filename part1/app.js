@@ -130,7 +130,9 @@ app.get('/api/walkers/summary', async (req, res) => {
         `;
         var [rows] = await db.query(get_walkers_summary_query);
         res.json(rows);
-    
+    } catch (error) {
+        console.error('Failed to get walkers summe')
+    }
 });
 
 module.exports = app;
