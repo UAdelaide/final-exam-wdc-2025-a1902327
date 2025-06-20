@@ -8,5 +8,9 @@ createApp({
             button_pos: { top: 200, left: window.innerWidth - 200 / 2 -75}
         };
     },
-    methods: {}
+    methods: {
+        getDog() {
+            fetch('')
+        }
+    }
 })
