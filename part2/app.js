@@ -43,7 +43,10 @@ const authCheck = (req, res, next) => {
 };
 
 app.get('/owner-dashboard', authCheck, (req, res) => {
-    res
+    if (req.session.user.role === 'owner')
+    {
+        res
+    }
 })
 
 // Export the app instead of listening here
