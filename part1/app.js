@@ -43,7 +43,12 @@ async function initializeDatabase() {
         await initialConnection.changeUser({ database: dbConfig.database });
         var insert_sql = fs.readFileSync(path.join(__dirname, 'task1-5.sql'), 'utf8');
         var insert_statement = insert_sql.split(/;\s*/m);
-        
+        for (var insert of insert_statement) {
+            if (insert.trim().length > 0) {
+                await initialConnection.query(insert);
+            }
+        }
+        console.log('Data inserted successfully');
     }
     catch (error) {
         console.error('Error creating database:', error);
