@@ -16,7 +16,7 @@
         <h1 class="ugly-title">Dog of the Day!</h1>
 
         <!-- User must chase this button to reveal the content -->
-        <div v-if="!imageVisible"
+        <div v-if="!visible"
              class="chase-button"
              :style="{ top: buttonPosition.top + 'px', left: buttonPosition.left + 'px' }"
              @mouseover="moveButton"
