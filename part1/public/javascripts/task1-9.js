@@ -33,7 +33,8 @@ createApp({
                 console.error("Transfer error");
             };
 
-            xhr.
+            xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
+            xhr.send();
         },
 
         showDogPics() {
