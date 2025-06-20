@@ -21,11 +21,11 @@ var dbConfig = {
 
 // Check if the database exists, if not, create it
 async function ini(params) {
-    var initialConnection = await mysql.createConnection(
+    var initialConnection = await mysql.createConnection({
         host: dbConfig.host,
         user: dbConfig.user,
         password: dbConfig.password
-    );
+    });
     console.log("Connected to mySQL database");
 
     try {
