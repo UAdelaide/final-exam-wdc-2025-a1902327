@@ -13,9 +13,9 @@
   <div class="card shadow-sm">
     <div class="card-body" p-4>
       <h1 class="card-title text-center mb-4">Welcome to the Dog Walking Service!</h1>
-      <form @submit.prevent = "login">
-        <div class = "mb-3">
-          <label for = "email" calss="form-label">Email</label>
+      <form @submit.prevent="login">
+        <div class="mb-3">
+          <label for="email" calss="form-label">Email</label>
           <input type="email" class="form-control" id="email" v-model="email" required>
         </div>
         <div class="mb-3">
@@ -24,12 +24,12 @@
         </div>
 
         <!-- Display error message -->
-        <div v-if = "errorMessage" class="alert alert-danger mt-3">
+        <div v-if="errorMessage" class="alert alert-danger mt-3">
           {{ errorMessage }}
         </div>
 
-        <div class = "d-grid mt-4">
-          <button type="submit" class ="btn btn-primary">Login</button>
+        <div class="d-grid mt-4">
+          <button type="submit" class="btn btn-primary">Login</button>
         </div>
       </form>
     </div>
