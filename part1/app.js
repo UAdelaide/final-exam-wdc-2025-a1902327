@@ -33,6 +33,7 @@ async function ini(params) {
                 await initialConnection.query(statement);
             }
         }
+        console.log()
     }
 }
 
