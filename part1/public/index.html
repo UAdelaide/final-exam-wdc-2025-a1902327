@@ -10,8 +10,34 @@
 
 <body>
 
+    <marquee class="blinking-text">*** WELCOME 2 THE BEST DOG PAGE ON THE INTERNET ***</marquee>
+
     <div id="app">
-        <h1>Dog Of The Day</h1>
+        <h1 class="header-title">Dog of the Day!</h1>
+
+        <!-- Kinematic Load: User must chase this button to reveal the content -->
+        <div v-if="!imageVisible"
+             class="chase-button"
+             :style="{ top: buttonPosition.top + 'px', left: buttonPosition.left + 'px' }"
+             @mouseover="moveButton"
+             @click="revealDog">
+             CATCH ME TO SEE THE DOG!
+        </div>
+
+        <!-- This content is hidden until the user successfully clicks the button -->
+        <div v-if="imageVisible" class="dog-container">
+            <!-- Accessibility: No alt attribute on the image -->
+            <img :src="dogImageUrl" class="dog-image">
+
+            <!-- Cognitive Load: Unnecessary and low-contrast details -->
+            <div class="dog-details">
+                <p>NAME: Buddy</p>
+                <p>BREED: Good Boy</p>
+                <p>AGE: 4 years</p>
+                <!-- Accessibility: Non-descriptive link text -->
+                <a href="#">Click Here</a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
