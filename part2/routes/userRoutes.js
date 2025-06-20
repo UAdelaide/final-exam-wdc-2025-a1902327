@@ -52,7 +52,9 @@ router.get('/me', (req, res) => {
 
 // GET dogs data for the logged in owner
 router.get('/dogs', async (req, res) => {
-  if (!req.se)
+  if (!req.session.user || req.session.user.role !== 'owner') {
+    return 
+  }
 })
 
 // POST logout
