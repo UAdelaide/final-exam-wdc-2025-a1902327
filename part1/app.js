@@ -71,6 +71,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
+// 
 app.get('/api/dogs', async (req, res) => {
     try {
         var get_dog_query = `
@@ -132,7 +133,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         res.json(rows);
     } catch (error) {
         console.error('Failed to get walkers summary:', error);
-        res.status(500).json({ error: 'Failed to get walkers summar'})
+        res.status(500).json({ error: 'Failed to get walkers summary data' });
     }
 });
 
