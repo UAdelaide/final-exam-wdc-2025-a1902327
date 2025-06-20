@@ -45,7 +45,9 @@ const authCheck = (req, res, next) => {
 app.get('/owner-dashboard', authCheck, (req, res) => {
     if (req.session.user.role === 'owner')
     {
-        res
+        res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
+    } else {
+        res.status(403).send
     }
 })
 
