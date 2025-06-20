@@ -42,5 +42,7 @@ const authCheck = (req, res, next) => {
     }
 };
 
+app.get('/owner')
+
 // Export the app instead of listening here
 module.exports = app;
