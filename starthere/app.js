@@ -27,7 +27,8 @@ let db;
 
     // Create the database if it doesn't exist
     var schema_sql = fs.readFileSync(path.join(__dirname,'dogwalks.sql'), 'utf8');
-    var schema_statement = schema_sql.split(/);
+    var schema_statement = schema_sql.split(/;\s*/m);
+    for ()
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
