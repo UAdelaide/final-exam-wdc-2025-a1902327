@@ -48,7 +48,8 @@ let db;
 
 app.get('api/dogs', async (req, res) => {
     try {
-        var sql = 
+        var sql = `
+        `
     }
 
 app.use(logger('dev'));
