@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 var port = 8080;
 
+// Initialize the database connection
 var dbConfig = {
     host: 'localhost',
     user: 'root',
@@ -18,10 +19,12 @@ var dbConfig = {
     database: ' DogWalkService'
 };
 
+// Check if the database exists, if not, create it
 async function ini(params) {
     var initialConnection = await mysql.createConnection(dbConfig);
     console.log("Connected to mySQL database");
 
+    //
     try {
         var schema_sql = fs.readFileSync(path.join(__dirname, 'dogwalks.sql'), 'utf8');
         var schema_statement = schema_sql.split(/;\s*/m);
