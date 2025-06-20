@@ -41,7 +41,7 @@
     const { createApp, ref, onMounted} = Vue;
     createApp({
       setup() {
-        const email = ref('');
+        const username = ref('');
         const password = ref('');
         const errorMessage = ref('');
 
@@ -56,7 +56,7 @@
                 'Content-Type': 'application/json'
               },
               body: JSON.stringify({
-                email: username.value,
+                username: username.value,
                 password: password.value
               })
             });
