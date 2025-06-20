@@ -31,7 +31,9 @@ createApp({
 
             xhr.onerror = () => {
                 console.error("Transfer error");
-            }
+            };
+
+            xhr.
         },
 
         showDogPics() {
