@@ -51,6 +51,6 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
     (SELECT dog_id FROM Dogs WHERE name = 'My Dieu'),
     '2025-06-18 12:00:00',
     25,
-    '',
+    'Hahndorf',
     'cancelled'
 ),
