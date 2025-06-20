@@ -7,6 +7,7 @@ var fs = require('fs');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const { nextTick } = require('process');
 
 var app = express();
 var port = 8080;
@@ -63,6 +64,9 @@ async function initializeDatabase() {
 
 var checkDbConnection = async () => {
     if (db) {
+        next();
+    } else {
+        res.status()
 
 // API Routes
 app.use(logger('dev'));
