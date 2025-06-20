@@ -21,7 +21,7 @@ createApp({
                         this.dog_img_link = data.message;
                     }
                 }  catch (e) {
-                    console.error('E')
+                    console.error("Error parsing JSON:", e);
                 }
             }
         },
