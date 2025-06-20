@@ -47,29 +47,6 @@ createApp({
         }
     },
     mounted() {
-        const xhr = new XMLHttpRequest();
-
-            xhr.onload = () => {
-                if (xhr.status === 200) {
-                    try {
-                        const data = JSON.parse(xhr.responseText);
-
-                        if (data.status === 'success') {
-                            this.dog_img_link = data.message;
-                        }
-                    } catch (e) {
-                        console.error("Error parsing JSON:", e);
-                    }
-                } else {
-                    console.error("Request failed with status:", xhr.status);
-                }
-            };
-
-            xhr.onerror = () => {
-                console.error("Transfer error");
-            };
-
-            xhr.open('GET', 'https://dog.ceo/api/breeds/image/random');
-            xhr.send();
+        this.getDog();
     }
 }).mount('#app');
