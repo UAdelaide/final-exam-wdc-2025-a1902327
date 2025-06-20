@@ -42,7 +42,7 @@ const authCheck = (req, res, next) => {
     }
 };
 
-// 
+// Serve the home page
 app.get('/owner-dashboard', authCheck, (req, res) => {
     if (req.session.user.role === 'owner') {
         res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
