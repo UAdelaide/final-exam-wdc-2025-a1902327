@@ -59,7 +59,8 @@ app.get('api/dogs', async (req, res) => {
         var [rows] = await db.query(sql);
         res.json(rows);
     } catch (error) {
-        console.error('')
+        console.error('Failed to get dogs list:', error);
+        res.status(500).json({ error: 'Failed to get dogs list data' });
     }
     }
 
