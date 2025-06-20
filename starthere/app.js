@@ -36,7 +36,7 @@ let db;
       }
     }
 
-    
+    var inser_sql = fs.readFileSync()
     console.log('Database created successfully');
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
