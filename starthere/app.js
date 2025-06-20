@@ -26,7 +26,7 @@ let db;
     console.log('Connected to MySQL server');
 
     // Create the database if it doesn't exist
-    const schema_sql = fs.readFileSync(path.join())
+    const schema_sql = fs.readFileSync(path.join(__dirname,'dogwalks.sql'), 'utf8');
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
