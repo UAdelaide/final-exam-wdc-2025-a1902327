@@ -37,6 +37,8 @@ app.use('/api/users', userRoutes);
 const authCheck = (req, res, next) => {
     if (req.session.user) {
         next();
+    } else {
+        res.redirect('/');
     }
 }
 
