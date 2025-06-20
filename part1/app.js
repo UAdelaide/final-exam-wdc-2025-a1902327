@@ -75,6 +75,7 @@ var checkDbConnection = async (req, res, next) => {
 // API Routes
 app.use('/api', checkDbConnection);
 app.use(logger('dev'));
+app.set('json spaces', 2);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
