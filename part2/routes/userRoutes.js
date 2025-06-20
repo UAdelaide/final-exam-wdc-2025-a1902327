@@ -43,7 +43,9 @@ router.post('/login', async (req, res) => {
 
 // POST logout
 router.post('/logout', (req, res) => {
-  re
+  req.session.destroy(err => {
+    if (err) {}
+  })
 })
 
 // GET current user (if logged in)
