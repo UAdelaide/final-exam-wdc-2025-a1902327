@@ -75,7 +75,9 @@
             } else {
               errorMessage.value = 'Unknown user role';
             }
-          } catch (error) {}
+          } catch (error) {
+            errorMessage.value = error.message;
+          }
 
     }).mount('#app');
   </script>
