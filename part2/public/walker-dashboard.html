@@ -102,10 +102,11 @@
 
         // Logout function
         async function logout() {
-          await fetchCurrentUser();
-          await loadWalkRequests();
+          try {
+            await fetch
+          }
         });
-        
+
         onMounted(() => {
           loadWalkRequests();
         });
