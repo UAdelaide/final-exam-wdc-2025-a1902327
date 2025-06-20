@@ -17,7 +17,8 @@ let db;
 var dbConfig = {
   host: 'localhost',
   user: 'dogwalks',
-  password: ''
+  password: 'password',
+  database: ''
 
 (async () => {
   try {
