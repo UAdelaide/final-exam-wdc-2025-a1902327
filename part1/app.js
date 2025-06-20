@@ -18,7 +18,7 @@ var dbConfig = {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: ' DogWalkService'
+    database: 'DogWalkService'
 };
 
 // Check if the database exists, if not, create it
