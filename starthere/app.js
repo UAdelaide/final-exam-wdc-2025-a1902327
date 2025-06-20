@@ -14,21 +14,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 let db;
 
-var dbConfig = {
-  host: 'localhost',
-  user: 'dogwalks',
-  password: 'password',
-  database: 'DogWalkService'
-};
-
 (async () => {
   try {
     // Connect to MySQL without specifying a database
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: '' // Set your MySQL root password
+      password: 'passowrd' // Set your MySQL root password
     });
+    console.lo
 
     // Create the database if it doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
