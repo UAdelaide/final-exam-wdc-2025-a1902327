@@ -66,7 +66,9 @@ router.post('/login', async (req, res) => {
     };
     // Return success response with user data
     res.status(200).json({ message: 'Login successful', user: req.session.user });
+
   } catch (error) {
+    console.error(':ogin failed')
     res.status(500).json({ error: 'Login failed' });
   }
 });
