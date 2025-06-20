@@ -63,7 +63,7 @@
           try {
             const res = await fetch('/api/users/current');
             if (!res.ok) throw new Error('Not logged in');
-            const data 
+            const data = await res.json();
           }
         }
 
