@@ -41,8 +41,10 @@ async function ini(params) {
     }
 }
 
-// 
-let
+// API Routes
+let db;
+
+app.get
 
 app.use(logger('dev'));
 app.use(express.json());
