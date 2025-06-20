@@ -26,7 +26,6 @@ createApp({
             } else {
                 console.error("Request failed with status:", xhr.status);
             }
-    };
 }
 },
 
