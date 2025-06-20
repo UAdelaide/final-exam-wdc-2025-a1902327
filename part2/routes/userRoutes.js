@@ -42,7 +42,9 @@ router.post('/login', async (req, res) => {
 });
 
 // POST logout
-
+router.post('/logout', (req, res) => {
+  re
+})
 
 // GET current user (if logged in)
 router.get('/me', (req, res) => {
