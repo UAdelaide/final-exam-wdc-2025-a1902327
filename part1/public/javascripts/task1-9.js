@@ -30,7 +30,7 @@ createApp({
             };
 
             xhr.onerror = () => {
-                console.error("Request")
+                console.error("Transfer error");
             }
         },
 
