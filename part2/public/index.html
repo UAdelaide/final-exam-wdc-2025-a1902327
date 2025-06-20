@@ -15,7 +15,8 @@
       <h1 class="card-title text-center mb-4">Welcome to the Dog Walking Service!</h1>
       <form @submit.prevent = "login">
         <div class = "mb-3">
-          <label for = "email" 
+          <label for = "email" calss="form-label">Email</label>
+          <input type="email" class="form-control" id="email" v-model="email" required>
         </div>
       </form>
     </div>
