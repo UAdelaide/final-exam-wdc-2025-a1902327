@@ -9,9 +9,10 @@ const app = express();
 app.use(session({
     secret: process.env.SESSION_SECRET || 'a_default_secret_key_for_development',
     resave: false,
+    // Don't save session if unmodified
     saveUninitialized: false,
     cookie: {
-        // 
+        // Use secure cookies in production
         secure: process.env.NODE_ENV === 'production',
         // If secure is true, the cookie will only be sent over HTTPS
         httpOnly: true,
