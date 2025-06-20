@@ -19,5 +19,9 @@ createApp({
                 })
                 .catch(err => console.error(err));
         },
+
+        showDogPics() {
+            
+        }
     }
 })
