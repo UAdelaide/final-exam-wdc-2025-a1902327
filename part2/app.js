@@ -53,7 +53,11 @@ app.get('/owner-dashboard', authCheck, (req, res) => {
     }
 });
 
-app.get()
+app.get('/walker-dashboard', authCheck, (req, res) => {
+    if (req.session.user.role === 'walker') {
+        
+    }
+})
 
 // Export the app instead of listening here
 module.exports = app;
