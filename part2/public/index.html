@@ -96,7 +96,8 @@
             console.log('Not logged in.');
           }
         });
-
+        return {email, password, errorMessage, login};
+      }
     }).mount('#app');
   </script>
 
