@@ -17,7 +17,7 @@ app.use(session({
         // If secure is true, the cookie will only be sent over HTTPS
         httpOnly: true,
         // Cookie will expire after 12 hours
-        maxAge: 1000 * 60 * 60 *12
+        maxAge: 1000 * 60 * 60 * 12
     }
 }))
 
@@ -42,14 +42,14 @@ const authCheck = (req, res, next) => {
     }
 };
 
+// 
 app.get('/owner-dashboard', authCheck, (req, res) => {
-    if (req.session.user.role === 'owner')
-    {
+    if (req.session.user.role === 'owner') {
         res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
     } else {
-        res.status(403).send
+        res.status(403).send('Acess denied');
     }
-})
+});
 
 // Export the app instead of listening here
 module.exports = app;
