@@ -49,7 +49,7 @@ router.post('/logout', (req, res) => {
     }
     // Clear the session cookie
     res.clearCookie('connect.sid');
-    
+    res.status(200).json({ message: 'Logout successful' });
   });
 });
 
