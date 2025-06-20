@@ -17,7 +17,7 @@ let db;
 var dbConfig = {
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: '',
     database: ' DogWalkService'
 };
 
