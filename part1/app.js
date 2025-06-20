@@ -23,7 +23,16 @@ async function ini(params) {
     console.log("Connected to mySQL database");
 
     try {
-        const schema_sql 
+        var schema_sql = fs.readFileSync(path.join(__dirname,'dogwalks.sql'), 'utf8');
+        var schema_statement = schema_sql.split(/;\s*/m);
+
+        for (var statement of schema_statement)
+    {
+      if (statement.trim().length > 0)
+      {
+        await initialConnection.query(statement);
+      }
+    }
     }
 }
 
