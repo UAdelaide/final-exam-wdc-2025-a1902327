@@ -62,7 +62,7 @@
         async function fetchCurrentUser() {
           try {
             const res = await fetch('/api/users/current');
-            if ()
+            if (!res.ok) throw new Error('')
           }
         }
 
