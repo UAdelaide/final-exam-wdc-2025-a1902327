@@ -30,7 +30,10 @@ let db;
     var schema_statement = schema_sql.split(/;\s*/m);
     for (var statement of schema_statement)
     {
-      if (statement.tr)
+      if (statement.trim().length > 0)
+      {
+        await connec
+      }
     }
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
