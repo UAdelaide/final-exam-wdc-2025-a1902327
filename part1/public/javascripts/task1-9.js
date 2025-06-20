@@ -10,7 +10,7 @@ createApp({
     },
     methods: {
         getDog() {
-            fetch('https://dog.ceo/dog-api/documentation/random')
+            fetch('https://dog.ceo/api/breeds/image/random')
                 .then(response => response.json())
                 .then(data => {
                     if (data.status === 'sucess') {
