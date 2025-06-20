@@ -44,12 +44,15 @@ const authCheck = (req, res, next) => {
 
 // Serve the home page
 app.get('/owner-dashboard', authCheck, (req, res) => {
+    // Check if the user is an owner
     if (req.session.user.role === 'owner') {
         res.sendFile(path.join(__dirname, 'public', 'owner-dashboard.html'));
     } else {
+        // If not an owner, deny access
         res.status(403).send('Acess denied');
     }
 });
+
 
 // Export the app instead of listening here
 module.exports = app;
