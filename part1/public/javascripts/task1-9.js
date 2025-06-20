@@ -5,8 +5,8 @@ createApp({
         return {
             dog_img_link: '',
             visible: false,
-            button_pos: { top: 200, left: window.innerWidth - 200 / 2 - 75 }
-            move_count : 0
+            button_pos: { top: 200, left: window.innerWidth - 200 / 2 - 75 },
+            move : 0
         };
     },
     methods: {
@@ -42,6 +42,7 @@ createApp({
         },
 
         moveButton() {
+            
             var top = Math.random() * (window.innerHeight - 100);
             var left = Math.random() * (window.innerWidth - 200);
             this.button_pos = { top: top, left: left };
