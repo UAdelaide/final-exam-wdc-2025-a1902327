@@ -15,7 +15,12 @@ var dbConfig = {
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: ' '
+    database: ' DogWalkService'
+};
+
+async function name(params) {
+    
+}
 
 app.use(logger('dev'));
 app.use(express.json());
