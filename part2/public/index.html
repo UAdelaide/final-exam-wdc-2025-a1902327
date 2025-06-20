@@ -83,7 +83,9 @@
         // Check if user is already logged in
         onMounted(async () => {
           try {
-            const res = await fetch
+            const res = await fetch('/api/users/me');
+            if (res.ok) {
+              const user 
           }
         })
 
