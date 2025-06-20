@@ -48,7 +48,7 @@
         async function login() {
           errorMessage.value = '';
           try {
-            const response = await 
+            const response = await('/api/users/me');
           }
         }
       data() {
