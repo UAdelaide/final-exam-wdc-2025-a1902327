@@ -4,10 +4,10 @@ const db = require('../models/db');
 
 // POST login
 router.post('/login', async (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
   // Check if email and password are provided
-  if (!email || !password) {
+  if (!username || !password) {
     return res.status(400).json({ error: 'Username and password are not entered.' });
   }
 
