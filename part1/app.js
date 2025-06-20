@@ -63,6 +63,7 @@ async function initializeDatabase() {
     }
 }
 
+initializeDatabase();
 var checkDbConnection = async (req, res, next) => {
     if (db) {
         next();
