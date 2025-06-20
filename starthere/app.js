@@ -5,12 +5,12 @@ var logger = require('morgan');
 var mysql = require('mysql2/promise');
 
 var app = express();
-var port = 8080;
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express)
 
 let db;
 
