@@ -82,4 +82,7 @@ async function startApp() {
         console.log('Server is running on http://localhost:' + port);
         console.log('API endpoints are avaliable:');
         console.log('GET /api/dogs');
+    });
+}
+
 module.exports = app;
