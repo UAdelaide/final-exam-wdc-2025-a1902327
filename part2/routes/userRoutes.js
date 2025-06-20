@@ -50,7 +50,8 @@ router.get('/me', (req, res) => {
   }
 });
 
-// GET dogs data for the 
+// GET dogs data for the logged in owner
+router.get('/dogs', async )
 
 // POST logout
 router.post('/logout', (req, res) => {
