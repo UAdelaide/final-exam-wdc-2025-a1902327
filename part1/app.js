@@ -125,7 +125,9 @@ app.get('/api/walkers/summary', async (req, res) => {
             SELECT wa.request_id FROM WalkApplications wa WHERE wa.walker_id = u.user_id AND wa.status = 'accepted')
         LEFT JOIN WalkRatings ratings ON ratings.walker_id = u.user_id
         WHERE u.role = 'walker'
-        GROUP BY u.user_id`
+        GROUP BY u.user_id, u.username
+        ORDER BY u.username;
+        `;
     }
 });
 
