@@ -104,8 +104,8 @@
         async function logout() {
           try {
             await fetch('/api/users/logout', { method: 'POST' });
-            wi
-          }
+            window.location.href = '/';
+          } catch 
         });
 
         onMounted(() => {
