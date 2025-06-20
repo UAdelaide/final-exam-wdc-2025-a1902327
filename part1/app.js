@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
 var app = express();
 var port = 8080;
 
+let db;
 // Initialize the database connection
 var dbConfig = {
     host: 'localhost',
