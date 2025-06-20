@@ -68,6 +68,8 @@ app.get('api/dogs', async (req, res) => {
     }
     });
 
+
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -88,5 +90,7 @@ async function startApp() {
         console.log('GET /api/dogs');
     });
 }
+
+startApp();
 
 module.exports = app;
