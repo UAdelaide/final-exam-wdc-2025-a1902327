@@ -35,7 +35,9 @@ app.use('/api/users', userRoutes);
 
 // Page routes
 const authCheck = (req, res, next) => {
-    
+    if (req.session.user) {
+        next();
+    }
 }
 
 // Export the app instead of listening here
