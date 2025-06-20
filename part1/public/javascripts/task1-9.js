@@ -29,7 +29,9 @@ createApp({
                 }
             };
 
-            xhr.onerror = () => {}
+            xhr.onerror = () => {
+                console.error("Request")
+            }
         },
 
         showDogPics() {
