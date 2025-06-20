@@ -3,6 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mysql = require('mysql2/promise');
+const { fstat } = require('fs');
 
 var app = express();
 
@@ -25,7 +26,7 @@ let db;
     console.log('Connected to MySQL server');
 
     // Create the database if it doesn't exist
-    const schema
+    const schema_sql = fs.readFileSync(path.join())
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
