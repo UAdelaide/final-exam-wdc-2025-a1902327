@@ -30,8 +30,8 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
     (SELECT dog_id FROM Dogs WHERE name = 'Bella'),
     '2025-06-11 09:30:00',
     45,
-    'City Center',
-    'open'
+    'Beachside Ave',
+    'accepted'
 ),
 (
     (SELECT dog_id FROM Dogs WHERE name = 'Tow'),
