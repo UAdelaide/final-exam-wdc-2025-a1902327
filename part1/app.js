@@ -112,6 +112,6 @@ app.get('/api/walkrequests/open', async (req, res) => {
     }
 });
 
-
+app.get('/api/walkers')
 
 module.exports = app;
