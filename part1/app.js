@@ -21,6 +21,10 @@ var dbConfig = {
 async function ini(params) {
     var initialConnection = await mysql.createConnection(dbConfig);
     console.log("Connected to mySQL database");
+
+    try {
+        const schema_sql 
+    }
 }
 
 app.use(logger('dev'));
