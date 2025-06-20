@@ -47,6 +47,9 @@ async function ini(params) {
 let db;
 
 app.get('api/dogs', async (req, res) => {
+    try {
+        
+    }
 
 app.use(logger('dev'));
 app.use(express.json());
