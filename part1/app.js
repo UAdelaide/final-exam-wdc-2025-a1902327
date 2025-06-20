@@ -90,8 +90,21 @@ app.get('/api/dogs', async (req, res) => {
 });
 
 app.get('/api/walkrequests/open', async (req, res) => {
-    
+    try {
+        var get_open_requests_query = `
+        SELECT
+            wr.request_id,
+            wr.dog_id,
+            d.name AS dog_name,
+            wr.request_date,
+            wr.status
+        FROM WalkRequests wr
+        JOIN Dogs d ON wr.dog_id = d.dog_id
+        WHERE wr.status = 'open';
+        `;
+        var [rows] = await db.query(get_open_requests_query);
+        res.json(rows);
+    }
 });
-)
 
 module.exports = app;
