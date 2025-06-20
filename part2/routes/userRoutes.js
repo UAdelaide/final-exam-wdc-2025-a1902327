@@ -8,7 +8,7 @@ router.post('/login', async (req, res) => {
 
   // Check if email and password are provided
   if (!email || !password) {
-    return res.status(400).json({ error: 'Email and password are not entered.' });
+    return res.status(400).json({ error: 'Username and password are not entered.' });
   }
 
   try {
@@ -16,7 +16,7 @@ router.post('/login', async (req, res) => {
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
       WHERE email = ? AND password_hash = ?
-    `, [email, password]);
+    `, [username, password]);
 
     // If no user found, return error
     if (rows.length === 0) {
