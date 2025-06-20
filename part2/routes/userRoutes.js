@@ -30,9 +30,9 @@ router.post('/register', async (req, res) => {
 
 router.get('/me', (req, res) => {
   if (req.session.user) {
-    res.json({ user: req.session.user})
-  }
-  res.json(req.session.user);
+    res.json({ user: req.session.user });
+  } else {
+  
 });
 
 // POST login (dummy version)
