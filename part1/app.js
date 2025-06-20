@@ -76,5 +76,6 @@ app.use('/users', usersRouter);
 async function startApp() {
     await initializeDatabase();
     db = await mysql.createConnection(dbConfig);
+    console.log("Connected to mySQL database"${dbConfig.database});
 }
 module.exports = app;
