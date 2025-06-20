@@ -14,6 +14,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 let db;
 
+var dbConfig = {
+
 (async () => {
   try {
     // Connect to MySQL without specifying a database
