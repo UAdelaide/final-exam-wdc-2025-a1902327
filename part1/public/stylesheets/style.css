@@ -15,7 +15,7 @@ body {
 .blinking-text {
   animation: blink 1s linear infinite;
   font-size: 2em;
-  color: cyan;
+  color: yellow;
 }
 
 .header-title {
