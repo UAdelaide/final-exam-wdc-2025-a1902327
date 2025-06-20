@@ -18,7 +18,7 @@ var dbConfig = {
     database: ' DogWalkService'
 };
 
-async function name(params) {
+async function ini(params) {
     
 }
 
