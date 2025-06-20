@@ -35,7 +35,7 @@ let db;
         await initialConnection.query(statement);
       }
     }
-    var console.log('Connec')
+    console.log('Database created successfully');
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
