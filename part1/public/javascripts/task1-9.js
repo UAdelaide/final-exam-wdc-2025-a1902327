@@ -17,6 +17,7 @@ createApp({
                         this.dog_img_link = data.message;
                     }
                 })
+                .catch(err => console.error(err));
 
         }
     }
