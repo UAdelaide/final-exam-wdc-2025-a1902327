@@ -53,6 +53,7 @@ app.get('api/dogs', async (req, res) => {
             d.name as dog_name,
             d.size,
             u.username as owner_username,
+        FROM Dogs d
         `
     }
 
