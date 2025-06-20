@@ -53,15 +53,6 @@ router.post('/logout', (req, res) => {
   });
 });
 
-// GET current user (if logged in)
-router.get('/me', (req, res) => {
-  if (req.session.user) {
-    res.json({ user: req.session.user });
-  } else {
-    res.status(401).json({ error: 'Not logged in' });
-  }
-});
-
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
   try {
@@ -72,20 +63,17 @@ router.get('/', async (req, res) => {
   }
 });
 
-// POST a new user (simple signup)
-router.post('/register', async (req, res) => {
-  const { username, email, password, role } = req.body;
-
-  try {
-    const [result] = await db.query(`
-      INSERT INTO Users (username, email, password_hash, role)
-      VALUES (?, ?, ?, ?)
-    `, [username, email, password, role]);
-
-    res.status(201).json({ message: 'User registered', user_id: result.insertId });
-  } catch (error) {
-    res.status(500).json({ error: 'Registration failed' });
+// GET current user (if logged in)
+router.get('/me', (req, res) => {
+  if (req.session.user) {
+    res.json({ user: req.session.user });
+  } else {
+    res.status(401).json({ error: 'Not logged in' });
   }
 });
+
+
+
+
 
 module.exports = router;
