@@ -61,6 +61,9 @@ async function initializeDatabase() {
     }
 }
 
+var checkDbConnection = async () => {
+    if (db) {
+
 // API Routes
 app.use(logger('dev'));
 app.use(express.json());
