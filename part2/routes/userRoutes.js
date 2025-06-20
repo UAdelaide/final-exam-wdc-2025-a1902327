@@ -41,6 +41,15 @@ router.post('/login', async (req, res) => {
   }
 });
 
+// GET current user (if logged in)
+router.get('/me', (req, res) => {
+  if (req.session.user) {
+    res.json({ user: req.session.user });
+  } else {
+    res.status(401).json({ error: 'Not logged in' });
+  }
+});
+
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
   try {
@@ -64,15 +73,6 @@ router.post('/register', async (req, res) => {
     res.status(201).json({ message: 'User registered', user_id: result.insertId });
   } catch (error) {
     res.status(500).json({ error: 'Registration failed' });
-  }
-});
-
-// GET current user (if logged in)
-router.get('/me', (req, res) => {
-  if (req.session.user) {
-    res.json({ user: req.session.user });
-  } else {
-    res.status(401).json({ error: 'Not logged in' });
   }
 });
 
