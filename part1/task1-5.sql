@@ -2,4 +2,4 @@
 USE DogWalkService;
 
 -- Insert five users
-INSERT INTO
+INSERT INTO Users ()
