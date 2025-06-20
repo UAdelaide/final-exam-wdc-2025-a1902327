@@ -71,7 +71,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-// 
+// /api
 app.get('/api/dogs', async (req, res) => {
     try {
         var get_dog_query = `
