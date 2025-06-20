@@ -24,7 +24,9 @@
         </div>
 
         <!-- Display error message -->
-        <div v-if 
+        <div v-if = "errorMessage" class="alert alert-danger mt-3">
+          {{ errorMessage }}
+        </div>
       </form>
     </div>
   </div>"
