@@ -56,6 +56,9 @@ app.get('api/dogs', async (req, res) => {
         FROM Dogs d
         JOIN Users u ON d.owner_id = u.user_id;
         `;
+        var [rows] = await db.query(sql);
+        res.json(rows);
+        
     }
 
 app.use(logger('dev'));
