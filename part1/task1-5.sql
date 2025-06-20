@@ -14,7 +14,7 @@ INSERT INTO Dogs (name, size, owner_id) VALUES
 ('Max', 'medium', (SELECT user_id FROM Users WHERE username = 'alice123')),
 ('Bella', 'small', (SELECT user_id FROM Users WHERE username = 'carol123')),
 ('Tow', 'large', (SELECT user_id FROM Users WHERE username = 'alice123')),
-('So Go', 'medium', (SELECT user_id FROM Users WHERE username = 'tommytung')),
+('Su Go', 'medium', (SELECT user_id FROM Users WHERE username = 'tommytung')),
 ('My Dieu', 'small', (SELECT user_id FROM Users WHERE username = 'tommytung'));
 
 -- Insert five walk requests
@@ -35,13 +35,13 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 ),
 (
     (SELECT dog_id FROM Dogs WHERE name = 'Tow'),
-    '2025-06-12 10:00:00',
+    '2025-06-15 16:00:00',
     60,
     'Greenfield',
     'open'
 ),
 (
-    (SELECT dog_id FROM Dogs WHERE name = 'So Go'),
+    (SELECT dog_id FROM Dogs WHERE name = 'Su Go'),
     '2025-06-13 11:00:00',
     30,
     'Downtown',
