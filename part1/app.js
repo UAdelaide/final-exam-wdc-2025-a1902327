@@ -53,12 +53,11 @@ async function initializeDatabase() {
         await initialConnection.end();
 
         db = await mysql.createPool(dbConfig);
+        console.log('Database connection pool created');
     }
     catch (error) {
         console.error('Error creating database:', error);
         process.exit(1);
-    } finally {
-        initialConnection.end();
     }
 }
 
@@ -88,6 +87,6 @@ app.get('/api/dogs', async (req, res) => {
         console.error('Failed to get dogs list:', error);
         res.status(500).json({ error: 'Failed to get dogs list data' });
     }
-    });
+});
 
 module.exports = app;
