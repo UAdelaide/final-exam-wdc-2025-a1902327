@@ -74,5 +74,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 async function startApp() {
-    
+    await initializeDatabase();
+    db = await mysql.createConnection(dbConfig);
+}
 module.exports = app;
