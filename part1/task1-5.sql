@@ -1,4 +1,4 @@
 -- Switch to the database
 USE DogWalkService;
 
--- Insert 
+-- Insert 5 users
