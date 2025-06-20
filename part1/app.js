@@ -19,7 +19,7 @@ var dbConfig = {
 };
 
 async function ini(params) {
-    
+    var initialConnection = 
 }
 
 app.use(logger('dev'));
