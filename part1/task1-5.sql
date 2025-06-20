@@ -17,4 +17,5 @@ INSERT INTO Dogs (name, size, owner_id) VALUES
 ('So Go', 'medium', (SELECT user_id FROM Users WHERE username = 'tommytung')),
 ('My Dieu', 'small', (SELECT user_id FROM Users WHERE username = 'tommytung'));
 
--- 
+-- Insert five walk requests
+INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
