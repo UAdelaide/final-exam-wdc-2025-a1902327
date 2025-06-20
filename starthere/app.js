@@ -32,7 +32,7 @@ let db;
     {
       if (statement.trim().length > 0)
       {
-        await connec
+        await initialConnection.query(statement);
       }
     }
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
