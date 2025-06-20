@@ -33,4 +33,4 @@ createApp({
     mounted() {
         this.getDog();
     }
-}).mount
+}).mounted(''
