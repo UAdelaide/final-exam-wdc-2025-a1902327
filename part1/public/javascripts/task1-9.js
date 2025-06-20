@@ -25,7 +25,7 @@ createApp({
         },
 
         moveButton() {
-            
+            var top = Math.random() * (windos)
         }
     }
 })
