@@ -1,2 +1,4 @@
 -- Switch to the database
-USE 
+USE DogWalkService;
+
+-- Insert 
