@@ -78,5 +78,6 @@ async function startApp() {
     db = await mysql.createConnection(dbConfig);
     console.log(`Connected to database '${dbConfig.database}'.`);
 
-    app.listen
+    app.listen(port, () => {
+        console.log('Server is running on http://localhost:' + port);
 module.exports = app;
