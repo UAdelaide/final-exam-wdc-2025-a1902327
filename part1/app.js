@@ -49,6 +49,10 @@ async function initializeDatabase() {
             }
         }
         console.log('Data inserted successfully');
+
+        await initialConnection.end();
+
+        db = await mysql.createPool(dbConfig);
     }
     catch (error) {
         console.error('Error creating database:', error);
