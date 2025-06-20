@@ -40,7 +40,7 @@ const authCheck = (req, res, next) => {
     } else {
         res.redirect('/');
     }
-}
+};
 
 // Export the app instead of listening here
 module.exports = app;
