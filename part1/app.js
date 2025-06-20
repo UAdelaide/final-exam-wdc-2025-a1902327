@@ -106,6 +106,8 @@ app.get('/api/walkrequests/open', async (req, res) => {
         `;
         var [rows] = await db.query(get_open_requests_query);
         res.json(rows);
+    } catch (error) {
+        console.error('Failed to get open walk requests')
     }
     }
 });
