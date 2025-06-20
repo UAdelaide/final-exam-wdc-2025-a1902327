@@ -128,6 +128,8 @@ app.get('/api/walkers/summary', async (req, res) => {
         GROUP BY u.user_id, u.username
         ORDER BY u.username;
         `;
+        var [rows] = await db.query(get_walkers_summary_query);
+        res.json
     }
 });
 
