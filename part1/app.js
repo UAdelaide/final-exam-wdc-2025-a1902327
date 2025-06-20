@@ -14,7 +14,8 @@ var port = 8080;
 var dbConfig = {
     host: 'localhost',
     user: 'root',
-password: 'password',
+    password: 'password',
+    database: ' '
 
 app.use(logger('dev'));
 app.use(express.json());
