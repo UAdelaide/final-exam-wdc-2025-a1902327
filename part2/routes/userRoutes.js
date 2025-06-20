@@ -52,10 +52,11 @@ router.get('/me', (req, res) => {
 
 // GET dogs data for the logged in owner
 router.get('/dogs', async (req, res) => {
+  // Check if the user is logged in and is an owner
   if (!req.session.user || req.session.user.role !== 'owner') {
-    return res.status(403).json({ error: ''})
+    return res.status(403).json({ error: 'Owner access required' });
   }
-})
+});
 
 // POST logout
 router.post('/logout', (req, res) => {
