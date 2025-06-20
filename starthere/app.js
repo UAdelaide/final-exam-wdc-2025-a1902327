@@ -15,6 +15,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 let db;
 
 var dbConfig = {
+  host: 'localhost',
+  user: 'dogwalk'
 
 (async () => {
   try {
