@@ -58,7 +58,9 @@ app.get('api/dogs', async (req, res) => {
         `;
         var [rows] = await db.query(sql);
         res.json(rows);
-    } catch (error)
+    } catch (error) {
+        console.error('')
+    }
     }
 
 app.use(logger('dev'));
