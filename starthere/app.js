@@ -3,7 +3,6 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mysql = require('mysql2/promise');
-const { fstat } = require('fs');
 
 var app = express();
 
@@ -11,7 +10,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))));
 
 let db;
 
@@ -21,23 +20,10 @@ let db;
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: 'passowrd' // Set your MySQL root password
+      password: '' // Set your MySQL root password
     });
-    console.log('Connected to MySQL server');
 
     // Create the database if it doesn't exist
-    var schema_sql = fs.readFileSync(path.join(__dirname,'dogwalks.sql'), 'utf8');
-    var schema_statement = schema_sql.split(/;\s*/m);
-    for (var statement of schema_statement)
-    {
-      if (statement.trim().length > 0)
-      {
-        await initialConnection.query(statement);
-      }
-    }
-
-    var inser_sql = fs.readFileSync(path.join(__dirname,'task1-5.sql'))
-    console.log('Database created successfully');
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
