@@ -107,6 +107,7 @@ app.get('/api/walkrequests/open', async (req, res) => {
         var [rows] = await db.query(get_open_requests_query);
         res.json(rows);
     }
+    }
 });
 
 module.exports = app;
