@@ -24,6 +24,8 @@ createApp({
             this.visible = true;
         },
 
-        
+        moveButton() {
+            
+        }
     }
 })
