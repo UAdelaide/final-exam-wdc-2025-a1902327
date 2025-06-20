@@ -12,13 +12,8 @@ createApp({
     methods: {
         getDog() {
             const xhr = new XMLHttpRequest();
-                xhr.then(response => response.json())
-                xhr.then(data => {
-                    if (data.status === 'success') {
-                        this.dog_img_link = data.message;
-                    }
-                })
-                .catch(err => console.error(err));
+
+            xhr.on
         },
 
         showDogPics() {
