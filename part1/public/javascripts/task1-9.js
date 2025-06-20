@@ -13,7 +13,11 @@ createApp({
         getDog() {
             const xhr = new XMLHttpRequest();
 
-            xhr.on
+            xhr.onload = () => {
+                try {
+                    const data = 
+                }
+            }
         },
 
         showDogPics() {
