@@ -15,7 +15,7 @@
     <div id="app">
         <h1 class="ugly-title">Dog of the Day!</h1>
 
-        <!-- Kinematic Load: User must chase this button to reveal the content -->
+        <!-- User must chase this button to reveal the content -->
         <div v-if="!imageVisible"
              class="chase-button"
              :style="{ top: buttonPosition.top + 'px', left: buttonPosition.left + 'px' }"
@@ -26,10 +26,9 @@
 
         <!-- This content is hidden until the user successfully clicks the button -->
         <div v-if="visible" class="dog-container">
-            <!-- Accessibility: No alt attribute on the image -->
             <img :src="dog_img_link" class="dog-image">
 
-            <!-- Cognitive Load: Unnecessary and low-contrast details -->
+            <!-- Unnecessary and low-contrast details -->
             <div class="dog-details">
                 <p>NAME: Buddy</p>
                 <p>BREED: Good Boy</p>
