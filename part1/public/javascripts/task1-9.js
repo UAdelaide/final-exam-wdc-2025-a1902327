@@ -23,10 +23,10 @@ createApp({
                 } catch (e) {
                     console.error("Error parsing JSON:", e);
                 }
-            else {
+            } else {
                 console.error("Request failed with status:", xhr.status);
             }
-            
+        };
     }
 },
 
