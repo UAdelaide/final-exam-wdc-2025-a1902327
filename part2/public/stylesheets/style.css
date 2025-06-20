@@ -11,7 +11,8 @@ body {
 }
 
 .login-container {
-    max-width: ;
+    max-width: 400px;
+    width: 100%;
 }
 
 header {
