@@ -1,1 +1,1 @@
-var { createApp } = 
+var { createApp } = Vue;
