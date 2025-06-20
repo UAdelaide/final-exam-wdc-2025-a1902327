@@ -94,7 +94,6 @@ app.get('/api/walkrequests/open', async (req, res) => {
         var get_open_requests_query = `
         SELECT
             wr.request_id,
-            wr.dog_id,
             d.name AS dog_name,
             wr.request_date,
             wr.status
