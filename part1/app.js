@@ -122,7 +122,7 @@ app.get('/api/walkers/summary', async (req, res) => {
             AVG(ratings.rating) AS average_rating
         FROM Users u
         LEFT JOIN WalkRequests we ON wr.status = 'completed' AND wr.request_id IN (
-            SELECT wa.request_id FROM WalkApplication)`
+            SELECT wa.request_id FROM WalkApplications wa WHERE wa.walker_id = u.user_id AND wa.status = 'accepted')`
     }
 });
 
