@@ -13,7 +13,9 @@ createApp({
             fetch('https://dog.ceo/dog-api/documentation/random')
                 .then(response => response.json())
                 .then(data => {
-                    if (data.status === 'sucess')
+                    if (data.status === 'sucess') {
+                        this.dog_img_link = data.message;
+                    }
                 })
 
         }
