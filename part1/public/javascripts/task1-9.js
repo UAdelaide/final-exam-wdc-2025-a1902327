@@ -11,9 +11,9 @@ createApp({
     },
     methods: {
         getDog() {
-            const 
-                .then(response => response.json())
-                .then(data => {
+            const xhr = new XMLHttpRequest();
+                xhr.then(response => response.json())
+                xhr.then(data => {
                     if (data.status === 'success') {
                         this.dog_img_link = data.message;
                     }
