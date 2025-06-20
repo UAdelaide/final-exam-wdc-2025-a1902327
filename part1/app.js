@@ -130,7 +130,7 @@ app.get('/api/walkers/summary', async (req, res) => {
         var get_walkers_summary_query = `
         SELECT
             u.username AS walker_username,
-            COUNT(DISTINCT WR.request_id) AS completed_walks,
+            COUNT(DISTINCT wr.request_id) AS completed_walks,
             COUNT(ratings.rating) AS total_ratings,
             AVG(ratings.rating) AS average_rating
         FROM Users u
