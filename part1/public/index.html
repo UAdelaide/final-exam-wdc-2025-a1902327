@@ -27,7 +27,7 @@
         <!-- This content is hidden until the user successfully clicks the button -->
         <div v-if="imageVisible" class="dog-container">
             <!-- Accessibility: No alt attribute on the image -->
-            <img src="dogImageUrl" class="dog-image">
+            <img :src="dogImageUrl" class="dog-image">
 
             <!-- Cognitive Load: Unnecessary and low-contrast details -->
             <div class="dog-details">
