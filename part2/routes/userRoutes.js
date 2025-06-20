@@ -50,6 +50,8 @@ router.get('/me', (req, res) => {
   }
 });
 
+// GET dogs data for the 
+
 // POST logout
 router.post('/logout', (req, res) => {
   req.session.destroy(err => {
