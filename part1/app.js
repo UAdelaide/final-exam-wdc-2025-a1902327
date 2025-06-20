@@ -27,12 +27,12 @@ async function ini(params) {
         var schema_statement = schema_sql.split(/;\s*/m);
 
         for (var statement of schema_statement)
-    {
-      if (statement.trim().length > 0)
-      {
-        await initialConnection.query(statement);
-      }
-    }
+        {
+            if (statement.trim().length > 0)
+            {
+                await initialConnection.query(statement);
+            }
+        }
     }
 }
 
