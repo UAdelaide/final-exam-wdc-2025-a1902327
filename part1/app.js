@@ -48,7 +48,6 @@ async function initializeDatabase() {
 }
 
 // API Routes
-let db;
 
 app.get('/api/dogs', async (req, res) => {
     try {
