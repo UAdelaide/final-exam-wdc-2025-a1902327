@@ -23,22 +23,21 @@ async function ini(params) {
     console.log("Connected to mySQL database");
 
     try {
-        var schema_sql = fs.readFileSync(path.join(__dirname,'dogwalks.sql'), 'utf8');
+        var schema_sql = fs.readFileSync(path.join(__dirname, 'dogwalks.sql'), 'utf8');
         var schema_statement = schema_sql.split(/;\s*/m);
 
-        for (var statement of schema_statement)
-        {
-            if (statement.trim().length > 0)
-            {
+        for (var statement of schema_statement) {
+            if (statement.trim().length > 0) {
                 await initialConnection.query(statement);
             }
         }
         console.log('Database created successfully');
     }
-    catch (error)
-    {
+    catch (error) {
         console.error('Error creating database:', error);
         process.exit(1);
+    } finally {
+        initialConnection.end();
     }
 }
 
