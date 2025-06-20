@@ -28,7 +28,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// 
+// GET current user (if logged in)
 router.get('/me', (req, res) => {
   if (req.session.user) {
     res.json({ user: req.session.user });
@@ -37,7 +37,7 @@ router.get('/me', (req, res) => {
   }
 });
 
-// POST login (dummy version)
+// POST login 
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
