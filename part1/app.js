@@ -35,6 +35,11 @@ async function ini(params) {
         }
         console.log('Database created successfully');
     }
+    catch (error)
+    {
+        console.error('Error creating database:', error);
+        process.exit(1);
+    }
 }
 
 app.use(logger('dev'));
