@@ -108,9 +108,10 @@ app.get('/api/walkrequests/open', async (req, res) => {
         res.json(rows);
     } catch (error) {
         console.error('Failed to get open walk requests:', error);
-        res.status(500).json({ error: ''})
-    }
+        res.status(500).json({ error: 'Failed to get open walk requests data' });
     }
 });
+
+
 
 module.exports = app;
