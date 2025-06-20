@@ -75,7 +75,7 @@
 
         // Function to apply to a walk request
         async function applyToWalk(requestId) {
-          if (!user.value || )
+          if (!user.value || user.value.role )
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
