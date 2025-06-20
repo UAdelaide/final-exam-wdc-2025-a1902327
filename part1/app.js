@@ -62,7 +62,7 @@ app.get('api/dogs', async (req, res) => {
         console.error('Failed to get dogs list:', error);
         res.status(500).json({ error: 'Failed to get dogs list data' });
     }
-    }
+    });
 
 app.use(logger('dev'));
 app.use(express.json());
