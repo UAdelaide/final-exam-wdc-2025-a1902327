@@ -10,7 +10,9 @@ app.use(session({
     secret: process.env.SESSION_SECRET || 'a_default_secret_key_for_development',
     resave: false,
     saveUninitialized: false,
-    cookie: 
+    cookie: {
+        secure: process.env.NODE_ENV === 'production',
+    }
 }))
 
 // Middleware
