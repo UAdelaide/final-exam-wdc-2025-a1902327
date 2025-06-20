@@ -50,7 +50,7 @@ async function initializeDatabase() {
 // API Routes
 let db;
 
-app.get('api/dogs', async (req, res) => {
+app.get('/api/dogs', async (req, res) => {
     try {
         var sql = `
         SELECT
