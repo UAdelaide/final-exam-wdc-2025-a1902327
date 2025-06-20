@@ -1,11 +1,9 @@
 body {
-  background-color: #ff00ff;
-
+  background-color: beige;
   font-family: 'Comic Sans MS', cursive, sans-serif;
   color: yellow;
   text-align: center;
   overflow: hidden;
-  /* Hide scrollbars to make content harder to access */
 }
 
 @keyframes blink {
