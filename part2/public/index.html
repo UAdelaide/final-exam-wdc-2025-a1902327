@@ -42,25 +42,25 @@
     createApp({
       setup() [
         const email = ref('');
-        const password = ref('');
-        const errorMessage = ref('');
+      const password = ref('');
+      const errorMessage = ref('');
 
-        async function login() {
-          errorMessage.value = '';
-          try {
-            const response = await('/api/users/me');
-            if (res.ok) {
-              const res = await res.json();
-              if (data.user.role === 'owner') {
-                window.location.href = '/owner-dashboard.html';
-              } else if (data.user.role === 'walker') {
-                window.location.href = '/walker-dashboard.html';
-              }
-            }
+      async function login() {
+      errorMessage.value = '';
+      try {
+        const response = await('/api/users/me');
+        if(res.ok) {
+      const res = await res.json();
+      if (data.user.role === 'owner') {
+        window.location.href = '/owner-dashboard.html';
+      } else if (data.user.role === 'walker') {
+        window.location.href = '/walker-dashboard.html';
+      }
+    }
           } catch (error) {
-            console.error('Not loged in:', error);
-        }
-      
+      console.error('Not loged in:', error);
+    }
+
     }).mount('#app');
   </script>
 
