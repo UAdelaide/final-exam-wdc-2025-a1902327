@@ -42,7 +42,7 @@ const authCheck = (req, res, next) => {
     }
 };
 
-// Serve the home page
+// Serve the owner dashboard page
 app.get('/owner-dashboard', authCheck, (req, res) => {
     // Check if the user is an owner
     if (req.session.user.role === 'owner') {
@@ -53,6 +53,7 @@ app.get('/owner-dashboard', authCheck, (req, res) => {
     }
 });
 
+// Serve the walker dashboard page
 app.get('/walker-dashboard', authCheck, (req, res) => {
     if (req.session.user.role === 'walker') {
         res.sendFile(path.join(__dirname, 'public', 'walker-dashboard.html'));
@@ -60,7 +61,7 @@ app.get('/walker-dashboard', authCheck, (req, res) => {
     else {
         res.status(403).send('Access denied');
     }
-})
+});
 
 // Export the app instead of listening here
 module.exports = app;
