@@ -42,7 +42,7 @@ createApp({
         },
 
         moveButton() {
-            if (this.move < 10) {
+            if (this.move < 7) {
                 this.move++;
                 var top = Math.random() * (window.innerHeight - 100);
                 var left = Math.random() * (window.innerWidth - 200);
