@@ -36,7 +36,7 @@ let db;
       }
     }
 
-    var inser_sql = fs.readFileSync(path.join(__dirname,''))
+    var inser_sql = fs.readFileSync(path.join(__dirname,'task1-5.sql'))
     console.log('Database created successfully');
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
