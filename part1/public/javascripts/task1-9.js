@@ -21,7 +21,9 @@ createApp({
         },
 
         showDogPics() {
-            
-        }
+            this.visible = true;
+        },
+
+        
     }
 })
