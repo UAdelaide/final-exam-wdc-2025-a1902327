@@ -66,7 +66,9 @@ var checkDbConnection = async () => {
     if (db) {
         next();
     } else {
-        res.status()
+        res.status(503).json({ error: 'Database connection not established' });
+    }
+};
 
 // API Routes
 app.use(logger('dev'));
