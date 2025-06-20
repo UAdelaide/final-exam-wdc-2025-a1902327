@@ -50,7 +50,7 @@ app.get('api/dogs', async (req, res) => {
     try {
         var sql = `
         SELECT
-            d.name as dog_name,
+            d.name AS dog_name,
             d.size,
             u.username AS owner_username,
         FROM Dogs d
