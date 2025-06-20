@@ -1,4 +1,4 @@
-script src="https://unpkg.com/vue@3"></script>
+<script src="https://unpkg.com/vue@3"></script>
 const { createApp } = Vue;
 
 createApp({
