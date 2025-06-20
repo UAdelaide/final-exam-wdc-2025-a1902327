@@ -5,7 +5,7 @@ var logger = require('morgan');
 var mysql = require('mysql2/promise');
 
 var app = express();
-var port = 
+var port = 8080;
 
 app.use(logger('dev'));
 app.use(express.json());
