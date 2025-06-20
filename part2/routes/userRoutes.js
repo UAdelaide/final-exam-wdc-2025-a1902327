@@ -15,7 +15,7 @@ router.post('/login', async (req, res) => {
     // Query to find user by email and password
     const [rows] = await db.query(`
       SELECT user_id, username, role FROM Users
-      WHERE email = ? AND password_hash = ?
+      WHERE username = ? AND password_hash = ?
     `, [username, password]);
 
     // If no user found, return error
