@@ -18,7 +18,8 @@ var dbConfig = {
   host: 'localhost',
   user: 'dogwalks',
   password: 'password',
-  database: ''
+  database: 'DogWalkService'
+};
 
 (async () => {
   try {
