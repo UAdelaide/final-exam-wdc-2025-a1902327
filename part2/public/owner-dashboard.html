@@ -108,9 +108,10 @@
         async function loadOwnerDogs() {
           try {
             const res = await fetch('/api/users/dogs');
-            if (!res.ok) {}
-            
-
+            if (!res.ok) {
+              throw new Error('Failed to get dogs name');
+            }
+            ownerDogs.value = await
           }
         }
 
