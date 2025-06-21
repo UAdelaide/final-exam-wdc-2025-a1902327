@@ -29,7 +29,9 @@
             <label class="form-label">Select Your Dog</label>
             <!-- Use v-model to bind the selected dog_id to the form -->
             <select v-model="form.dog_id" class="form-select" required>
+              <!-- Default -->
               <option disabled value="">-- Choose a dog --</option>
+              <!-- Loop through the owner's dogs and create an option for each -->
               <option v-for="dog in ownerDogs" :key="dog.dog_id" :value="dog.dog_id">
                 {{ dog.name }}
               </option>
