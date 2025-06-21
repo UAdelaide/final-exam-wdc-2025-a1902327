@@ -167,13 +167,13 @@
 
         onMounted(() => {
           loadWalks();
-          loadOwnerDogs();
+          loadOwnerDogs();  // Load the owner's dogs when the component is mounted
         });
 
         return {
           form,
           walks,
-          ownerDogs,
+          ownerDogs,  // Add ownerDogs to the return object
           message,
           error,
           submitWalkRequest,
