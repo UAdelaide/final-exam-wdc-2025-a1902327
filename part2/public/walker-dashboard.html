@@ -64,7 +64,8 @@
         // Function to handle logout
         async function getCurrentUser() {
           try {
-            const 
+            const res = await fetch('/api/users/me');
+            if ()
             // Fetch current user to check if logged in
             const res = await fetch('/api/users/current');
             if (!res.ok) throw new Error('Not logged in');
