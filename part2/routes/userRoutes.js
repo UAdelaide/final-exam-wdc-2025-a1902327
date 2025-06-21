@@ -65,7 +65,7 @@ router.get('/dogs', async (req, res) => {
       res.json(dogs);
     } catch (error) {
       console.error('Error getting owner dogs information:', error);
-      
+      res.status(500).json({ error: 'Failed to get dogs data' });
     }
   }
 });
