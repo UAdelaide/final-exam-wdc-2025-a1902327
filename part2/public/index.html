@@ -85,7 +85,8 @@
                   return res.json();
                 })
               );
-              const photos
+              const photos = await Promise.all(dog_photos);
+              
           }
         }
 
