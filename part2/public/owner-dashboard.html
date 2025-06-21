@@ -131,7 +131,7 @@
               body: JSON.stringify(form.value)
             });
             const result = await res.json();
-            
+
             if (!res.ok) throw new Error(result.error || 'Error submitting walk request');
 
             message.value = result.message;
@@ -155,7 +155,7 @@
             const response = await fetch('/api/users/logout', {
               method: 'POST'
             });
-
+            
             if (!response.ok) {
               throw new Error('Logout failed');
             }
