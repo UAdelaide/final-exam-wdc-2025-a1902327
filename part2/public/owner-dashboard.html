@@ -160,7 +160,7 @@
               throw new Error('Logout failed');
             }
 
-            // 
+            // Redirect to the home page after successful logout
             window.location.href = '/';
           } catch (err) {
             error.value = 'Logout failed';
