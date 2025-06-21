@@ -3,7 +3,9 @@ const path = require('path');
 const session = require('express-session');
 require('dotenv').config();
 
-const db = require('./models/db'); // Assuming db.js exports a configured database connection
+// Import the database connection
+const db = require('./models/db');
+
 const app = express();
 
 // Session middleware setup
