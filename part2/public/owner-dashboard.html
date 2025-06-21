@@ -25,8 +25,9 @@
 
           <!-- Add dropdown menu for dog name selection -->
           <div class="mb-3">
-            <!
+            <!-- Display the label of the dropdown menu-->
             <label class="form-label">Select Your Dog</label>
+            <!-- Use v-model to bind the selected dog_id to the form -->
             <select v-model="form.dog_id" class="form-select" required>
               <option disabled value="">-- Choose a dog --</option>
               <option v-for="dog in ownerDogs" :key="dog.dog_id" :value="dog.dog_id">
