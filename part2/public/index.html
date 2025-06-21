@@ -144,7 +144,7 @@
             dog.value = dogListData.map((dog, index) => ({
               ...dog,
               image_url: photos[index] ? photoResults[index].message : 'https://via.placeholder.com/100'
-            ;
+            }));
           } catch (err) {
             error.value = err.message;
           } finally {
