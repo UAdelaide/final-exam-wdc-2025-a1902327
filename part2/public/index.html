@@ -159,10 +159,10 @@
                 })
             );
             const photos = await Promise.all(dog_photos);
-            
-            dogs.value = dogListData.map((dog, index) => ({
+
+            dogs.value = dog_list.map((dog, index) => ({
               ...dog,
-              image_url: photos[index] ? photoResults[index].message : 'https://via.placeholder.com/100'
+              image_url: photos[index] ? photo[index].message : 'https://via.placeholder.com/100'
             }));
           } catch (err) {
             error.value = err.message;
