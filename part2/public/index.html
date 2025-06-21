@@ -78,7 +78,7 @@
             // Get the list of dogs
             const dog_list = await dog_list_response.json();
 
-            // 
+            // Create an array of promises to get dog photos
             const dog_photos = dog_list.map(dog =>
               fetch('https://dog.ceo/api/breeds/image/random')
                 .then(res => {
