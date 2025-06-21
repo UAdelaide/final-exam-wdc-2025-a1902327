@@ -111,8 +111,9 @@
             if (!res.ok) {
               throw new Error('Failed to get dogs name');
             }
-            ownerDogs.value = await
-          }
+            ownerDogs.value = await res.json();
+          } catch 
+
         }
 
         // Function to submit a new walk request
