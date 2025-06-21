@@ -72,6 +72,7 @@ app.get('/api/dogs', async (req, res) => {
     try {
         var get_dog_query = `
         SELECT
+            d.dog_id,
             d.name AS dog_name,
             d.size,
             u.username AS owner_username
