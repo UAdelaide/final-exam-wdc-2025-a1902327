@@ -138,6 +138,7 @@
                 })
               );
               const photos = await Promise.all(dog_photos);
+              
               const combineData = dogListData.map((dog, index) => {
                 return {
                   ...dog,
