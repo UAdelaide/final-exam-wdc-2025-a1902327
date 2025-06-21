@@ -69,7 +69,7 @@
             <tr v-for="dog in dogs" :key="dog.dog_id">
               <td>{{ dog.size }}</td>
               <td class="fw-bold">{{ dog.dog_name }}</td>
-              <td>{{ dog.owner_username }}</td>
+              <td>{{ dog.owner_id }}</td>
               <td>
                 <img :src="image_url" :alt="'A photo of' + dog.dog_name" class="img-thumbnail shadow-sm"
                   @error="handleImageError" style="width: 100px; height: 100px; object-fit:cover;">
