@@ -70,7 +70,7 @@
               throw new Error('Error. Login again!');
             }
             const data = await res.json();
-            // 
+            // Store user object 
             user.value = data.user;
             // If not a walker, redirect to home
           } catch (err) {
