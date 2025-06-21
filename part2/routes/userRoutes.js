@@ -59,8 +59,11 @@ router.get('/dogs', async (req, res) => {
 
   var ownerID = req.session.user.user_id;
   try {
+    // Query to get the dogs for the logged in owner
     const [dogs] = await db.query(`
       SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [ownerID]);
+      res.json(dogs);
+    
   }
 });
 
