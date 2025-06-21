@@ -73,7 +73,7 @@
               <td>{{ dog.owner_id }}</td>
               <td>
                 <img :src="dog.image_url" :alt="'A photo of' + dog.dog_name" class="img-thumbnail shadow-sm"
-                  @error="handleImageError" style="width: auto; height: 100px; object-fit:cover;">
+                  @error="handleImageError" style="height: 100px; width: auto; object-fit:cover;">
               </td>
             </tr>
           </tbody>
