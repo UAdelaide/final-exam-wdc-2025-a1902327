@@ -93,11 +93,11 @@
               body: JSON.stringify({ walker_id: user.value.id })
             });
             const result = await res.json();
-
             // Check the response
             if (!res.ok) throw new Error(result.error || 'Application failed');
             message.value = result.message;
             error.value = '';
+            // Reload the walk requests after applying
             await loadWalkRequests();
           } catch (err) {
             error.value = err.message;
