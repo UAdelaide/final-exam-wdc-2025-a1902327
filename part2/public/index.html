@@ -71,7 +71,9 @@
         async function getDogWithPhotos() {
           try {
             const dog_list_response = await fetch('/api/dogs');
-            if (dog_list_response.ok)
+            if (!dog_list_response.ok) {
+              throw new Error('Failed to get the list of dogs ')
+            }
           }
         }
 
