@@ -64,13 +64,13 @@
     const { createApp, ref, onMounted} = Vue;
     createApp({
       setup() {
-        const isLoading = ref(true);
-        const dogs = ref([]);
-        const error = ref(null);
         const username = ref('');
         const password = ref('');
         const errorMessage = ref('');
 
+        const isLoading = ref(true);
+        const dogs = ref([]);
+        const error = ref(null);
         // Function to get dog images
         async function getDogWithPhotos() {
           try {
