@@ -64,6 +64,9 @@
     const { createApp, ref, onMounted} = Vue;
     createApp({
       setup() {
+        const isLoading = ref(true);
+        const dogs = ref([]);
+        const error = ref(null);
         const username = ref('');
         const password = ref('');
         const errorMessage = ref('');
