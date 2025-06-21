@@ -146,21 +146,7 @@
         }
 
         // Check if user is already logged in
-        onMounted(async () => {
-          try {
-            const res = await fetch('/api/users/me');
-            if (res.ok) {
-              const data = await res.json();
-              if (data.user.role === 'owner') {
-                window.location.href = '/owner-dashboard.html';
-              } else if (data.user.role === 'walker') {
-                window.location.href = '/walker-dashboard.html';
-              }
-            }
-          }  catch (error) {
-            console.log('Not logged in.');
-          }
-        });
+        onMounted(getDogWithPhotos)
         return {
           username,
           password,
