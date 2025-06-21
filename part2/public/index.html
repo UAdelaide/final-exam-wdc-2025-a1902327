@@ -146,11 +146,13 @@
         }
 
         // Check if user is already logged in
-        onMounted(getDogWithPhotos)
+        onMounted(getDogWithPhotos());
+
         return {
           username,
           password,
           errorMessage,
+          handleImageError,
           login };
       }
     }).mount('#app');
