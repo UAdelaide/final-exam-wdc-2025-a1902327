@@ -58,7 +58,9 @@ router.get('/dogs', async (req, res) => {
   }
 
   var ownerID = req.session.user.user_id;
-  tr
+  try {
+    const [dogs] = await db.
+  }
 });
 
 // POST logout
