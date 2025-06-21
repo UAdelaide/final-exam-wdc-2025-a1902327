@@ -59,19 +59,6 @@
           }
         }
 
-        // Function to handle logout
-        async function fetchCurrentUser() {
-          try {
-            const res = await fetch('/api/users/current');
-            if (!res.ok) throw new Error('Not logged in');
-            const data = await res.json();
-            user.value = data.user;
-            // If
-          } catch (err) {
-            window.location.href ='/';
-          }
-        }
-
         async function applyToWalk(requestId) {
           try {
             const res = await fetch(`/api/walks/${requestId}/apply`, {
