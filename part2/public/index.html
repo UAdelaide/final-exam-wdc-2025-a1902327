@@ -76,7 +76,7 @@
             }
             const dog_list = await dog_list_response.json();
 
-            const dog_photos = dog_list.map(dog =>
+            const dog_photos = dog_list.map(dog => {
               fetch('https://dog.ceo/api/breeds/image/random')
                 .then(res => {
                   if (!res.ok) {
