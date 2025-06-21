@@ -74,7 +74,9 @@
             if (!dog_list_response.ok) {
               throw new Error('Failed to get the list of dogs');
             }
-            const 
+            const dog_list = await dog_list_response.json();
+
+            const dog_photos = dog
           }
         }
 
