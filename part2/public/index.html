@@ -158,7 +158,13 @@
           event.target.message = 'no image';
         }
 
-        onMounted(getDogWithPhotos())
+        onMounted(getDogWithPhotos);
+        return {
+          isLoading,
+          dogs,
+          error,
+          
+        }
       }
     }
   </script>
