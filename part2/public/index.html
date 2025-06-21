@@ -46,7 +46,9 @@
       </div>
     </div>
 
-    <div v-if="error"
+    <div v-if="error" class=""alert alert-danger">
+      {{ error }}}}
+    </div>
 
   <div v-if="!isLoading && !error" class="table-responsive">
     <table class="table table-striped table-bordered table-hover align-middle">
