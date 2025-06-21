@@ -89,11 +89,12 @@
             const res = await fetch(`/api/walks/${requestId}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              // Send the walker 
+              // Send the walker ID from the user object
               body: JSON.stringify({ walker_id: user.value.id })
             });
             const result = await res.json();
 
+            // Check the response
             if (!res.ok) throw new Error(result.error || 'Application failed');
             message.value = result.message;
             error.value = '';
