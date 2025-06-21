@@ -62,11 +62,10 @@ router.get('/dogs', async (req, res) => {
     // Query to get the dogs for the logged in owner
     const [dogs] = await db.query(`
       SELECT dog_id, name FROM Dogs WHERE owner_id = ?`, [ownerID]);
-      res.json(dogs);
-    } catch (error) {
-      console.error('Error getting owner dogs information:', error);
-      res.status(500).json({ error: 'Failed to get dogs data' });
-    }
+    res.json(dogs);
+  } catch (error) {
+    console.error('Error getting owner dogs information:', error);
+    res.status(500).json({ error: 'Failed to get dogs data' });
   }
 });
 
