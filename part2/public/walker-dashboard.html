@@ -70,7 +70,7 @@
               throw new Error('Error. Login again!');
             }
             const data = await res.json();
-            // Store user object 
+            // Store user object
             user.value = data.user;
             // If not a walker, redirect to home
           } catch (err) {
@@ -81,7 +81,7 @@
         // Function to apply to a walk request
         async function applyToWalk(requestId) {
           // Check if user is logged in and is a walker
-          if (!user.value || user.value.role) {
+          if (!user.value || !user.value.role) {
             error.value = 'You must be logged in as a walker to apply for walks.';
             return;
           }
