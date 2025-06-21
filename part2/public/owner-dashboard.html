@@ -110,10 +110,11 @@
           try {
             // Fetch the owner's dogs from the API
             const res = await fetch('/api/users/dogs');
-            // 
+            // Check the response
             if (!res.ok) {
               throw new Error('Failed to get dogs name');
             }
+            // Parse the JSON response and assign it to ownerDogs
             ownerDogs.value = await res.json();
           } catch (err) {
             error.value = err.message;
