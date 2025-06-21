@@ -112,8 +112,9 @@
               throw new Error('Failed to get dogs name');
             }
             ownerDogs.value = await res.json();
-          } catch 
-
+          } catch (err) {
+            error.value = err.message;
+          }
         }
 
         // Function to submit a new walk request
