@@ -108,7 +108,7 @@
           } catch (err) {
             error.value = 'Logout failed';
           }
-        });
+        }
 
         onMounted(() => {
           loadWalkRequests();
@@ -118,7 +118,7 @@
           walks,
           message,
           error,
-          applyToWalk
+          applyToWalk,
         };
       }
     }).mount('#app');
