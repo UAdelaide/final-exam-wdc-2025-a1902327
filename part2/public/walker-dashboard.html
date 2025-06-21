@@ -90,7 +90,7 @@
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               // Send the walker ID from the user object
-              body: JSON.stringify({ walker_id: user.value.id })
+              body: JSON.stringify({ walker_id: user.value.user })
             });
             const result = await res.json();
             // Check the response
