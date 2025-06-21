@@ -181,6 +181,7 @@
           } catch (err) {
             error.value = err.message;
           } finally {
+            // Set loading state to false after fetching data
             isLoading.value = false;
           }
         }
@@ -190,6 +191,7 @@
           event.target.message = 'no image';
         }
 
+        // Call the function to get dog images when the component is mounted
         onMounted(getDogWithPhotos);
         return {
           isLoading,
