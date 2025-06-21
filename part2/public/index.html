@@ -172,7 +172,7 @@
 
             // Combine the original dog data with the new image url
             dogs.value = dog_list.map((dog, index) => ({
-              ...dog,
+              ...dog, // Copy all properites from the original dog object
               image_url: photos[index] ? photos[index].message : 'https://via.placeholder.com/100'
             }));
           } catch (err) {
