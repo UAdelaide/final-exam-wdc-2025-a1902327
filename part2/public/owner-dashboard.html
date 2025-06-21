@@ -105,9 +105,12 @@
           }
         }
 
+        // Function to load the owner's dogs
         async function loadOwnerDogs() {
           try {
+            // Fetch the owner's dogs from the API
             const res = await fetch('/api/users/dogs');
+            // 
             if (!res.ok) {
               throw new Error('Failed to get dogs name');
             }
