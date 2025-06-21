@@ -69,7 +69,7 @@
             </tr>
           </thead>
           <tbody>
-            <!-- Loop through the 'dogs' array-->
+            <!-- Loop through the 'dogs' array. 'key' provides a unique identifier for each row-->
             <tr v-for="dog in dogs" :key="dog.dog_id">
               <td>{{ dog.dog_id }}</td>
               <td class="fw-bold">{{ dog.dog_name }}</td>
