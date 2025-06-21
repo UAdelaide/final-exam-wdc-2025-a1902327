@@ -76,6 +76,7 @@
               <td>{{ dog.size }}</td>
               <td>{{ dog.owner_id }}</td>
               <td>
+                <!-- Display the dog image. If the image fails to load, call the 'handleImageError' function -->
                 <img :src="dog.image_url" :alt="'A photo of' + dog.dog_name"
                   @error="handleImageError" style="height: 100px; width: auto; object-fit:cover;">
               </td>
