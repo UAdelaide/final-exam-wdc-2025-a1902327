@@ -78,7 +78,12 @@
 
             const dog_photos = dog_list.map(dog =>
               fetch('https://dog.ceo/api/breeds/image/random')
-                .then
+                .then(res => {
+                  if (!res.ok) {
+                    return null;
+                  }
+                  
+                })
               }))
           }
         }
