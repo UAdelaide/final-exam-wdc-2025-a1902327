@@ -131,7 +131,7 @@
               body: JSON.stringify(form.value)
             });
             const result = await res.json();
-
+            
             if (!res.ok) throw new Error(result.error || 'Error submitting walk request');
 
             message.value = result.message;
