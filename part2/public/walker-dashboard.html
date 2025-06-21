@@ -64,14 +64,13 @@
         // Function to handle logout
         async function getCurrentUser() {
           try {
+            // Fetch current user to check if logged in
             const res = await fetch('/api/users/me');
             if (!res.ok) {
               throw new Error('Error. Login again!');
             }
-            // Fetch current user to check if logged in
-            const res = await fetch('/api/users/current');
-            if (!res.ok) throw new Error('Not logged in');
             const data = await res.json();
+            // 
             user.value = data.user;
             // If not a walker, redirect to home
           } catch (err) {
