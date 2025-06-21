@@ -94,7 +94,12 @@
                 };
               });
 
-              dog.value = err.message
+              dog.value = combineData;
+          } catch (err) {
+            error.value = err.message;
+          } finally {
+            is
+          }
           }
         }
 
