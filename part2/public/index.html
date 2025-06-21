@@ -44,24 +44,25 @@
                 <th scope="col">Owner ID</th>
                 <th scope="col">Photo</th>
               </tr>
-            <thead>
-            <tbody>
-              <tr v-for="dog in dogs" :key="dog.dog_id">
-                <td>{{ dog.size }}</td>
-                <td class="fw-bold">{{ dog.dog_name }}</td>
-                <td>{{ dog.owner_username }}</td>
-                <td>
-                  <img :src="image_url" :alt="'A photo of' + dog.dog_name" class="img-thumbnail shadow-sm" @error="handleImageError" style="width: 100px; height: 100px; object-fit:cover;">
-                </td>
-              </tr>
-            </tbody>
+              <thead>
+              <tbody>
+                <tr v-for="dog in dogs" :key="dog.dog_id">
+                  <td>{{ dog.size }}</td>
+                  <td class="fw-bold">{{ dog.dog_name }}</td>
+                  <td>{{ dog.owner_username }}</td>
+                  <td>
+                    <img :src="image_url" :alt="'A photo of' + dog.dog_name" class="img-thumbnail shadow-sm"
+                      @error="handleImageError" style="width: 100px; height: 100px; object-fit:cover;">
+                  </td>
+                </tr>
+              </tbody>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    const { createApp, ref, onMounted} = Vue;
+    const { createApp, ref, onMounted } = Vue;
     createApp({
       setup() {
         const username = ref('');
@@ -107,7 +108,8 @@
           username,
           password,
           errorMessage,
-          login };
+          login
+        };
       }
     }).mount('#loginapp');
 
@@ -136,18 +138,16 @@
                   }
                   return res.json();
                 })
-              );
-              const photos = await Promise.all(dog_photos);
+            );
+            const photos = await Promise.all(dog_photos);
 
-              dog.value = dogListData.map((dog, index) => {
-                return {
-                  ...dog,
-                  dog_id: index + 1,
-                  image_url: photos[index] ? photos[index].message : 'https://'
-                };
-              });
-
-              dog.value = combineData;
+            dog.value = dogListData.map((dog, index) => {
+              return {
+                ...dog,
+                dog_id: index + 1,
+                image_url: photos[index] ? photos[index].message : 'https://'
+              };
+            });
           } catch (err) {
             error.value = err.message;
           } finally {
