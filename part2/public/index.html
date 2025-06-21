@@ -149,7 +149,8 @@
         // Function to get dog images
         async function getDogWithPhotos() {
           try {
-            const dog_list_response = await fetch('/api/dogs'); // API endpoint to get the list of dogs
+            // Fetch the list of dogs from the API endpoint
+            const dog_list_response = await fetch('/api/dogs');
             if (!dog_list_response.ok) {
               throw new Error('Failed to get the list of dogs');
             }
