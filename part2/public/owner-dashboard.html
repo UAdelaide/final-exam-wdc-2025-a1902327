@@ -25,7 +25,9 @@
           <!-- Add dropdown menu for dog name selection -->
           <div class="mb-3">
             <label class="form-label">Choose a dog</label>
-            <select v-model="form.dog_id" class="form-select">
+            <select v-model="form.dog_id" class="form-select" required>
+              <option disabled value=""
+            </select>>
           </div>
           <div class="mb-3">
             <label class="form-label">Requested Date & Time</label>
