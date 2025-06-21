@@ -154,7 +154,7 @@
             if (!dog_list_response.ok) {
               throw new Error('Failed to get the list of dogs');
             }
-            // For each dogs, create a promise to fetch a random image from the external dog.ceo API
+            // Get the list of dogs
             const dog_list = await dog_list_response.json();
 
             // Create an array of promises to get dog photos
@@ -167,6 +167,7 @@
                   return res.json();
                 })
             );
+            // For each dog, fetch a 
             const photos = await Promise.all(dog_photos);
 
             dogs.value = dog_list.map((dog, index) => ({
