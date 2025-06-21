@@ -167,7 +167,7 @@
                   return res.json();
                 })
             );
-            // For each dog, fetch a 
+            // For each dog, using promise to fetch a random image from the external API dog.ceo
             const photos = await Promise.all(dog_photos);
 
             dogs.value = dog_list.map((dog, index) => ({
