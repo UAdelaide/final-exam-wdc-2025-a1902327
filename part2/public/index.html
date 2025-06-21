@@ -68,6 +68,7 @@
         const password = ref('');
         const errorMessage = ref('');
 
+        // Function to 
         async function getDogWithPhotos() {
           try {
             const dog_list_response = await fetch('/api/dogs');
@@ -102,6 +103,7 @@
           }
         }
 
+        // Function to handle image loading error
         function handleImageError(event) {
           event.target.message = 'no image';
         }
