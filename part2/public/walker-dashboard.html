@@ -81,7 +81,7 @@
         // Function to apply to a walk request
         async function applyToWalk(requestId) {
           // Check if user is logged in and is a walker
-          if (user.value.role !== 'walker') {
+          if (!user.value || user.value.role !== 'walker') {
             error.value = 'You must be logged in as a walker to apply for walks.';
             return;
           }
