@@ -24,9 +24,9 @@
         <form @submit.prevent="submitWalkRequest">
           <!-- Add dropdown menu for dog name selection -->
           <div class="mb-3">
-            <label class="form-label">Select </label>
+            <label class="form-label">Select Your Dog</label>
             <select v-model="form.dog_id" class="form-select" required>
-              <option disabled value=""
+              <option disabled value="">-- Choose a dog --</option>
             </select>>
           </div>
           <div class="mb-3">
