@@ -68,6 +68,7 @@ app.get('/walker-dashboard', authCheck, (req, res) => {
     }
 });
 
+// 
 app.get('/api/dogs', async (req, res) => {
     try {
         var get_dog_query = `
