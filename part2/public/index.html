@@ -177,7 +177,7 @@
               // Add the image_url property with the fetched image or a placeholder if not available
               image_url: photos[index] ? photos[index].message : 'https://via.placeholder.com/100'
             }));
-            
+            // Sen error message if the process fails
           } catch (err) {
             error.value = err.message;
           } finally {
